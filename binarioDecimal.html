@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Convertidor de Binario a Decimal</title>
+</head>
+<body>
+  <script>
+    var deci = prompt("Ingresa el numero binario: ");
+    var sum = 0;
+    var multi = 0;
+    var proceso = "";
+    var multiProceso = "";
+    var resProceso = "";
+    var bin = "";
+    proceso += "CONVERSION DE NUMERO BINARIO A DECIMAL\n\n";
+    for (var i = 0; i < deci.length; i++) {
+      var digit = parseInt(deci[i]);
+      bin += digit + "\t\t";
+      sum = sum * 2 + digit;
+      multi *= 2;
+      multiProceso += multi + "\t\t";
+      multi += digit;
+      resProceso += multi + "\t\t";
+    }
+    proceso += bin + "\n" + multiProceso + "\n--------------------------------------------------------------------------\n" + resProceso + "\n\nEl número en decimal es: " + sum;
+    alert(proceso);
+    alert("¡Gracias por utulizar el convertidor de binario a decimal realizado por HECTOR! XD");
+  </script>
+</body>
+</html>
